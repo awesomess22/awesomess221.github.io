@@ -1,0 +1,59 @@
+<html lang="en">
+  <link rel="icon" type="images/x-icon" href="https://awesomess22.github.io/logo_square_rounded.svg" />
+  <head>
+    <title>Home</title>
+
+    
+  </head>
+
+<head><base target="_blank"></head><body><h1>Some stuff that doesn't show in your history : )</h1>
+<button>Open hidden stuff</button>
+<script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://awesomess22.github.io/unblock";
+ 
+    if (url) {
+        var win;
+ 
+        document.querySelector('button').onclick = function() {
+            if (win) {
+                win.focus();
+            } 
+            else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+            }
+            document.querySelector('button').style.background='#ff5148';
+            document.querySelector('button').innerHTML="Site Loaded! Reload page to reopen!";
+        };
+    }
+</script>
+<style>
+* {
+    color: black; 
+    font-family: arial;
+    text-align: center;
+}
+    
+button {
+    width: 400px; 
+    height: 200px;
+    border-radius: 25px;
+    background-color: #1F51FF;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    transition: background-color 500ms;
+    font-size: 42px;
+}
+button:hover {
+    background-color: #1F51FF;
+}
+</style></body></html>
